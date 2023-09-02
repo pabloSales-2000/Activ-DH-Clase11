@@ -19,7 +19,17 @@ const collectibles = {
     },
 
     figuresByBrand: function(marca) {
-        return this.figuras.filter(figura => figura.marca == marca);
+        let marcaFiltro = this.figuras.filter((figura) => {
+            return marca == figura.marca;
+        })
+        return marcaFiltro
     }
-    
 }
+
+console.log(collectibles.figuresByBrand("Bandai"));
+
+//otra forma de hacer el filter (da el mismo resultado array vacio no encuentro el error)
+
+/*figuresByBrand: function(marca) {
+    return this.figuras.filter(figura => figura.marca == marca);
+}*/
