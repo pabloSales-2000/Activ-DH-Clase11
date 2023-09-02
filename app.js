@@ -19,8 +19,8 @@ const collectibles = {
     },
 
     figuresByBrand: function(marca) {
-        let marcaFiltro = this.figuras.filter((figura) => {
-            return marca == figura.marca;
+        let marcaFiltro = this.figuras.filter((figura) => { // devuelve un array vacio, porque?
+            return figura == figura.marca;
         })
         return marcaFiltro
     }
