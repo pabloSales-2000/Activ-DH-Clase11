@@ -19,14 +19,16 @@ const collectibles = {
     },
 
     figuresByBrand: function(marca) {
-        let marcaFiltro = this.figuras.filter((figura) => { // devuelve un array vacio, porque?
-            return figura == figura.marca;
+        let marcaFiltro = this.figuras.filter((figura) => {
+ 
+            return figura.marca === marca;
+
         })
-        return marcaFiltro
+        return marcaFiltro;
     }
 }
 
-console.log(collectibles.figuresByBrand("Bandai"));
+//console.log(collectibles.figuresByBrand("Bandai"));
 
 //otra forma de hacer el filter (da el mismo resultado array vacio no encuentro el error)
 
